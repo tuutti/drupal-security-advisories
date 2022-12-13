@@ -42,6 +42,7 @@ jobs:
       - name: Build 7.x
         run: |
           mkdir build/ -p && time php console.php build:composer legacy
+          ls -la build/
           cp build/composer-7.x.json ~/
 
       - uses: actions/checkout@v3
@@ -59,7 +60,7 @@ jobs:
           ref: 7.x
       - name: Update 7.x branch
         run: |
-          cp ~/composer-7x.json composer.json
+          cp ~/composer-7.x.json composer.json
           git add composer.json
           git commit -m 'Automated commit'
           git push
