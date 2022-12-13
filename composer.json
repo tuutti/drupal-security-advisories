@@ -4,7 +4,7 @@
     "type": "metapackage",
     "license": "GPL-2.0-or-later",
     "extra": {
-        "changed": 1670941233
+        "changed": 1670941506
     },
     "conflict": {
         "drupal/acquia_connector": ">=1.0.0,<1.16.0",
