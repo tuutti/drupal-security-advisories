@@ -6,7 +6,7 @@ on:
     # Once a day at 01:12.
     - cron:  '12 1 * * *'
 env:
-  DSA_BASE_DIR: ~/build
+  DSA_BASE_DIR: /tmp/build
   DSA_CACHE_DIR: /tmp/symfony-cache
 jobs:
   build:
@@ -33,8 +33,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ env.DSA_CACHE_DIR }}
-          key: ${{ runner.os }}-build-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-build-
+          key: ${{ runner.os }}-httpcache-${{ github.run_id }}
+          restore-keys: ${{ runner.os }}-httpcache-
 
       - name: Setup Git user
         run: |
