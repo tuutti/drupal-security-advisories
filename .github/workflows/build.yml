@@ -36,3 +36,4 @@ jobs:
         run: |
           mkdir build/
           time php console.php build:composer
+          ls -la build/
