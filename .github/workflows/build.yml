@@ -26,7 +26,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: build/
-          key: ${{ runner.os }}-build-${{ hashFiles('**/build/*.json') }}
+          key: ${{ runner.os }}-build-
           restore-keys: ${{ runner.os }}-build-
 
       - name: Install Composer dependencies
@@ -34,6 +34,6 @@ jobs:
 
       - name: Build 9.x
         run: |
-          mkdir build/
+          mkdir build/ -p
           time php console.php build:composer
           ls -la build/
