@@ -36,11 +36,16 @@ jobs:
         run: |
           mkdir build/ -p
           time php console.php build:composer
+          cp build/composer-9.x.json  ~/composer.json
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        working-directory: build/
+      - name: Update repository
+        uses: actions/checkout@v3
         with:
-          create_branch: true
-          branch: 9.x
-          commit_author: Author <actions@github.com>
-
+          ref: 9.x
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          cp ~/composer.json .
+          git add composer.json
+          git commit -m 'Automated commit'
+          git push
