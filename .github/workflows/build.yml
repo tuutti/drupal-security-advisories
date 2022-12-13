@@ -22,14 +22,10 @@ jobs:
           php-version: '8.1'
           tools: composer:v2
 
-      - name: Get build directory
-        id: build_cache
-        run: echo "::set-output name=dir::build/"
-
       - name: Cache build directory
         uses: actions/cache@v3
         with:
-          path: ${{ steps.build_cache.outputs.dir }}
+          path: ${{ env.GITHUB_WORKSPACE }}/build
           key: ${{ runner.os }}-build-${{ hashFiles('**/*.json') }}
           restore-keys: ${{ runner.os }}-build-
 

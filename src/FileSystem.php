@@ -32,7 +32,7 @@ final class FileSystem
     {
         $json = json_encode($content, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
-        return file_put_contents($this->getFilePath($target), $json . PHP_EOL) === false;
+        return file_put_contents($this->getFilePath($target), $json . PHP_EOL) !== false;
     }
 
 }
