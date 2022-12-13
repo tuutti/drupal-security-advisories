@@ -42,7 +42,6 @@ jobs:
       - name: Build 7.x
         run: |
           mkdir build/ -p && time php console.php build:composer legacy
-          ls -la build/
           cp build/composer-7.x.json ~/
 
       - uses: actions/checkout@v3
