@@ -37,3 +37,10 @@ jobs:
           mkdir build/ -p
           time php console.php build:composer
 
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        working-directory: build/
+        with:
+          create_branch: true
+          branch: 9.x
+          commit_author: Author <actions@github.com>
+
