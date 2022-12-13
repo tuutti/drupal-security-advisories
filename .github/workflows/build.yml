@@ -1,9 +1,6 @@
 on:
   workflow_dispatch:
   pull_request:
-  push:
-    branches:
-      - main
   schedule:
     # Once a day at 01:12.
     - cron:  '12 1 * * *'
@@ -39,16 +36,17 @@ jobs:
 
       - name: Build 9.x
         run: |
-          mkdir build/ -p
-          time php console.php build:composer current
+          mkdir build/ -p && time php console.php build:composer current
           cp build/composer-9.x.json ~/
-          time php console.php build:composer legacy
+
+      - name: Build 7.x
+        run: |
+          mkdir build/ -p && time php console.php build:composer legacy
           cp build/composer-7.x.json ~/
 
       - uses: actions/checkout@v3
         with:
           ref: 9.x
-
       - name: Update 9.x branch
         run: |
           cp ~/composer-9.x.json composer.json
