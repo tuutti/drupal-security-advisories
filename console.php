@@ -21,7 +21,12 @@ $httpClient = new CachingHttpClient(
     HttpClient::create(),
     new Store(getenv('DSA_CACHE_DIR') ?: '/tmp/symfony-cache')
 );
-$fileSystem = new FileSystem(__DIR__ . '/build');
+$baseDir = getenv('DSA_BASE_DIR') ?: __DIR__ . '/build';
+
+if (!is_dir($baseDir)) {
+    mkdir($baseDir, 0755, true);
+}
+$fileSystem = new FileSystem($baseDir);
 
 $app = new Application();
 $app->add(new BuildComposerJson(
