@@ -38,10 +38,11 @@ jobs:
           time php console.php build:composer
           cp build/composer-9.x.json  ~/composer.json
 
-      - name: Update repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           ref: 9.x
+
+      - name: Update repository
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
