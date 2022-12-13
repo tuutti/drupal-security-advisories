@@ -7,14 +7,10 @@ on:
   schedule:
     # Once a day at 01:12.
     - cron:  '12 1 * * *'
-name: Tests
+name: Build
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        php-version: ['8.1']
     steps:
       - uses: actions/checkout@v3
         with:
@@ -23,7 +19,7 @@ jobs:
       - name: Setup PHP with composer v2
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '${{ matrix.php-version }}'
+          php-version: '8.1'
           tools: composer:v2
 
       - name: Get build directory
@@ -42,4 +38,5 @@ jobs:
 
       - name: Build 9.x
         run: |
+          mkdir build/
           time php console.php build:composer
