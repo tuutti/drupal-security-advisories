@@ -6,7 +6,7 @@ on:
     # Once a day at 01:12.
     - cron:  '12 1 * * *'
 env:
-  DSA_BASE_DIR: /tmp/build
+  DSA_BUILD_DIR: /tmp/build
   DSA_CACHE_DIR: /tmp/symfony-cache
 jobs:
   build:
@@ -25,11 +25,11 @@ jobs:
       - name: Cache build directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.DSA_BASE_DIR }}
+          path: ${{ env.DSA_BUILD_DIR }}
           key: ${{ runner.os }}-build-${{ github.run_id }}
           restore-keys: ${{ runner.os }}-build-
 
-      - name: Cache http cache directory
+      - name: Cache HTTP cache directory
         uses: actions/cache@v3
         with:
           path: ${{ env.DSA_CACHE_DIR }}
@@ -50,14 +50,14 @@ jobs:
 
       - name: Build 7.x
         run: |
-          time php console.php build:composer legacy
+          time php console.php build:composer 7.x
 
       - uses: actions/checkout@v3
         with:
           ref: 9.x
       - name: Update 9.x branch
         run: |
-          cp $DSA_BASE_DIR/composer-9.x.json composer.json
+          cp $DSA_BUILD_DIR/current.json composer.json
           git add composer.json
           git commit -m 'Automated commit'
           git push
@@ -67,7 +67,7 @@ jobs:
           ref: 7.x
       - name: Update 7.x branch
         run: |
-          cp $DSA_BASE_DIR/composer-7.x.json composer.json
+          cp $DSA_BUILD_DIR/legacy.json composer.json
           git add composer.json
           git commit -m 'Automated commit'
           git push

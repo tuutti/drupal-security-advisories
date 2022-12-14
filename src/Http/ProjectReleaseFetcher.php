@@ -31,15 +31,13 @@ final class ProjectReleaseFetcher extends HttpBase
             'type' => 'project_release',
             'taxonomy_vocabulary_7' => 188131,
             'field_release_build_type' => 'static',
-            'sort' => 'changed',
-            'direction' => 'DESC',
             'page' => $page,
             'field_release_category' => $releaseCategory,
         ]);
         return sprintf('https://www.drupal.org/api-d7/node.json?%s', $query);
     }
 
-    public function get(string $releaseCategory, int $lastChanged) : \Generator
+    public function get(string $releaseCategory) : \Generator
     {
         // @todo Figure out what to do with these.
         // Fetch all releases marked as 'insecure' (tid = 188131). Some modules seem to have security
@@ -61,10 +59,6 @@ final class ProjectReleaseFetcher extends HttpBase
             $content = $this->request($this->getUrl($page, $releaseCategory));
 
             foreach ($content->list as $item) {
-                // Stop processing as soon as we find first unchanged item.
-                if ((int) $item->changed < $lastChanged) {
-                    break 2;
-                }
                 // Parse the project name from release URL. The URL should be something like
                 // https://drupal.org/project/drupal/releases/9.4.7.
                 $name = $this->parseProjectName($item->url);

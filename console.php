@@ -10,23 +10,21 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\HttpClient\CachingHttpClient;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpKernel\HttpCache\Store;
-use function App\time;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 date_default_timezone_set('UTC');
-time();
 
 $httpClient = new CachingHttpClient(
     HttpClient::create(),
     new Store(getenv('DSA_CACHE_DIR') ?: '/tmp/symfony-cache')
 );
-$baseDir = getenv('DSA_BASE_DIR') ?: __DIR__ . '/build';
+$buildDir = getenv('DSA_BUILD_DIR') ?: __DIR__ . '/build';
 
-if (!is_dir($baseDir)) {
-    mkdir($baseDir, 0755, true);
+if (!is_dir($buildDir)) {
+    mkdir($buildDir, 0755, true);
 }
-$fileSystem = new FileSystem($baseDir);
+$fileSystem = new FileSystem($buildDir);
 
 $app = new Application();
 $app->add(new BuildComposerJson(
