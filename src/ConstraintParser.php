@@ -88,7 +88,7 @@ final class ConstraintParser
         }
 
         // Mark all previous releases as insecure if project has at least one security release
-        // and no constraints were generated.
+        // and no other constraints were generated.
         // This usually happens when project has a release marked as 'Security update', but
         // previous releases were not marked as 'Insecure'. This can cause some false positives
         // since there is no way of telling what versions are *actually* insecure.

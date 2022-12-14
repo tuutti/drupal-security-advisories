@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace App\Http;
 
+use Symfony\Contracts\HttpClient\ResponseInterface;
+
 final class ProjectReleaseFetcher extends HttpBase
 {
     private array $projects = [];
@@ -39,34 +41,40 @@ final class ProjectReleaseFetcher extends HttpBase
 
     public function get(string $releaseCategory) : \Generator
     {
+        $responses = [];
+
         // Fetch all releases marked as 'insecure' (tid = 188131) or 'Security update' (tid = 100).
         // Some modules seem to have security releases where previous releases are not marked as insecure.
         foreach ([188131, 100] as $tid) {
             $content = $this->request($this->getUrl($tid, 0, $releaseCategory));
-            $totalPages = $this->getPagerValue($content->last);
+            $totalPages = $this
+                ->getPagerValue($this->parseResponse($content)->last);
 
             for ($page = 0; $page <= $totalPages; $page++) {
-                $content = $this->request($this->getUrl($tid, $page, $releaseCategory));
+                $responses[] = $this->request($this->getUrl($tid, $page, $releaseCategory));
+            }
+        }
 
-                foreach ($content->list as $item) {
-                    // Parse the project name from release URL. The URL should be something like
-                    // https://drupal.org/project/drupal/releases/9.4.7.
-                    $name = $this->parseProjectName($item->url);
+        /** @var \Symfony\Contracts\HttpClient\ResponseInterface $response */
+        foreach ($responses as $response) {
+            foreach ($this->parseResponse($response)->list as $item) {
+                // Parse the project name from release URL. The URL should be something like
+                // https://drupal.org/project/drupal/releases/9.4.7.
+                $name = $this->parseProjectName($item->url);
 
-                    if (isset($this->projects[$name])) {
-                        continue;
-                    }
-                    $this->projects[$name] = $name;
-
-                    yield $name;
+                if (isset($this->projects[$name])) {
+                    continue;
                 }
+                $this->projects[$name] = $name;
+
+                yield $name;
             }
         }
     }
 
-    protected function parseRequest(string $content): object
+    protected function parseResponse(ResponseInterface $content): object
     {
-        return json_decode($content);
+        return json_decode($content->getContent());
     }
 
     protected function getContentType(): string

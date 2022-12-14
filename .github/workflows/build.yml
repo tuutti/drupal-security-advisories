@@ -1,13 +1,11 @@
 name: Build
 on:
   workflow_dispatch:
-  pull_request:
   schedule:
     # Once a day at 01:12.
     - cron:  '12 1 * * *'
 env:
   DSA_BUILD_DIR: /tmp/build
-  DSA_CACHE_DIR: /tmp/symfony-cache
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,20 +19,6 @@ jobs:
         with:
           php-version: '8.1'
           tools: composer:v2
-
-      - name: Cache build directory
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.DSA_BUILD_DIR }}
-          key: ${{ runner.os }}-build-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-build-
-
-      - name: Cache HTTP cache directory
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.DSA_CACHE_DIR }}
-          key: ${{ runner.os }}-httpcache-${{ github.run_id }}
-          restore-keys: ${{ runner.os }}-httpcache-
 
       - name: Setup Git user
         run: |
