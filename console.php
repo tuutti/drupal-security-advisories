@@ -3,7 +3,6 @@
 declare(strict_types = 1);
 
 use App\Commands\BuildComposerJson;
-use App\FileSystem;
 use App\Http\ProjectReleaseFetcher;
 use App\Http\UpdateFetcher;
 use Symfony\Component\Console\Application;
@@ -24,11 +23,9 @@ $buildDir = getenv('DSA_BUILD_DIR') ?: __DIR__ . '/build';
 if (!is_dir($buildDir)) {
     mkdir($buildDir, 0755, true);
 }
-$fileSystem = new FileSystem($buildDir);
-
 $app = new Application();
 $app->add(new BuildComposerJson(
-    $fileSystem,
+    $buildDir,
     new ProjectReleaseFetcher($httpClient),
     new UpdateFetcher($httpClient)
 ));

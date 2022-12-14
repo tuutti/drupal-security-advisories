@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace App\Commands;
 
 use App\ConstraintParser;
-use App\FileSystem;
 use App\Http\ProjectReleaseFetcher;
 use App\Http\UpdateFetcher;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -17,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 final class BuildComposerJson extends Command
 {
     public function __construct(
-        private readonly FileSystem $fileSystem,
+        private readonly string $buildDir,
         private readonly ProjectReleaseFetcher $projectManager,
         private readonly UpdateFetcher $releaseFetcher
     ) {
@@ -36,41 +35,34 @@ final class BuildComposerJson extends Command
 
     public function execute(InputInterface $input, OutputInterface $output): int
     {
-        $versionParser = new ConstraintParser();
-
-        [
-            'release' => $release,
-            'version' => $version,
-            'target' => $file,
-        ] = match ($input->getArgument('release')) {
+        ['release' => $release, 'version' => $version, 'file' => $file] = match ($input->getArgument('release')) {
             '7.x', 'legacy' => [
                 'version' => '7.x',
                 'release' => 'legacy',
-                'target' => 'legacy.json',
+                'file' => 'legacy.json',
             ],
             default => [
                 'version' => 'current',
                 'release' => 'current',
-                'target' => 'current.json',
+                'file' => 'current.json',
             ],
         };
 
-        if (!$composer = $this->fileSystem->getContent($file)) {
-            $composer = [
-                'name' => 'drupal-composer/drupal-security-advisories',
-                'description' => 'Prevents installation of composer packages with known security vulnerabilities',
-                'type' => 'metapackage',
-                'license' => 'GPL-2.0-or-later',
-                'conflict' => []
-            ];
-        }
+        $composer = [
+            'name' => 'drupal-composer/drupal-security-advisories',
+            'description' => 'Prevents installation of composer packages with known security vulnerabilities',
+            'type' => 'metapackage',
+            'license' => 'GPL-2.0-or-later',
+            'conflict' => []
+        ];
+
         foreach ($this->projectManager->get($release) as $name) {
             $output->write(sprintf('<info>Fetching release data</info>: %s ... ', $name));
 
             $project = $this->releaseFetcher
                 ->get($name, $version);
 
-            if (!$constraint = $versionParser->format($project)) {
+            if (!$constraint = ConstraintParser::format($project)) {
                 $output->write('<comment>No valid constraints found!</comment>');
 
                 continue;
@@ -84,6 +76,11 @@ final class BuildComposerJson extends Command
         }
         ksort($composer['conflict']);
 
-        return $this->fileSystem->saveContent($file, $composer) ? Command::SUCCESS : Command::FAILURE;
+        $json = json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+        if (file_put_contents(sprintf('%s/%s', $this->buildDir, $file), $json . PHP_EOL) === false) {
+            return Command::FAILURE;
+        }
+        return Command::SUCCESS;
     }
 }

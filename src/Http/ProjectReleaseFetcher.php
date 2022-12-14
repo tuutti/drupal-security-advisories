@@ -25,11 +25,11 @@ final class ProjectReleaseFetcher extends HttpBase
         return isset($query['page']) ? (int) $query['page'] : 0;
     }
 
-    private function getUrl(int $page, string $releaseCategory): string
+    private function getUrl(int $tid, int $page, string $releaseCategory): string
     {
         $query = http_build_query([
             'type' => 'project_release',
-            'taxonomy_vocabulary_7' => 188131,
+            'taxonomy_vocabulary_7' => $tid,
             'field_release_build_type' => 'static',
             'page' => $page,
             'field_release_category' => $releaseCategory,
@@ -39,36 +39,27 @@ final class ProjectReleaseFetcher extends HttpBase
 
     public function get(string $releaseCategory) : \Generator
     {
-        // @todo Figure out what to do with these.
-        // Fetch all releases marked as 'insecure' (tid = 188131). Some modules seem to have security
-        // releases where previous releases are not marked as insecure.
-        // The modules I've found so far include:
-        // - drupal/die_in_twig
-        // - drupal/element_embed
-        // - drupal/expand_collapse_formatter
-        // - drupal/google_index_api
-        // - drupal/img_annotator
-        // - drupal/mapbox_ui
-        // - drupal/nodeaccess
-        // - drupal/opigno_group_manager
-        // - drupal/readonlymode.
-        $content = $this->request($this->getUrl(0, $releaseCategory));
-        $totalPages = $this->getPagerValue($content->last);
+        // Fetch all releases marked as 'insecure' (tid = 188131) or 'Security update' (tid = 100).
+        // Some modules seem to have security releases where previous releases are not marked as insecure.
+        foreach ([188131, 100] as $tid) {
+            $content = $this->request($this->getUrl($tid, 0, $releaseCategory));
+            $totalPages = $this->getPagerValue($content->last);
 
-        for ($page = 0; $page <= $totalPages; $page++) {
-            $content = $this->request($this->getUrl($page, $releaseCategory));
+            for ($page = 0; $page <= $totalPages; $page++) {
+                $content = $this->request($this->getUrl($tid, $page, $releaseCategory));
 
-            foreach ($content->list as $item) {
-                // Parse the project name from release URL. The URL should be something like
-                // https://drupal.org/project/drupal/releases/9.4.7.
-                $name = $this->parseProjectName($item->url);
+                foreach ($content->list as $item) {
+                    // Parse the project name from release URL. The URL should be something like
+                    // https://drupal.org/project/drupal/releases/9.4.7.
+                    $name = $this->parseProjectName($item->url);
 
-                if (isset($this->projects[$name])) {
-                    continue;
+                    if (isset($this->projects[$name])) {
+                        continue;
+                    }
+                    $this->projects[$name] = $name;
+
+                    yield $name;
                 }
-                $this->projects[$name] = $name;
-
-                yield $name;
             }
         }
     }
