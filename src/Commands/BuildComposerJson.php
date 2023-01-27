@@ -38,13 +38,11 @@ final class BuildComposerJson extends Command
         return match ($input->getArgument('release')) {
             '7.x', 'legacy' => [
                 'updateEndpoint' => '7.x',
-                'composerRepository' => 'https://packages.drupal.org/7/',
                 'release' => 'legacy',
                 'file' => Container::baseDir().'/legacy.json',
             ],
             default => [
                 'updateEndpoint' => 'current',
-                'composerRepository' => 'https://packages.drupal.org/8/',
                 'release' => 'current',
                 'file' => Container::baseDir().'/current.json',
             ],
