@@ -252,7 +252,7 @@
         "drupal/jammer": ">=1.0.0,<1.4.0",
         "drupal/janrain_capture": "<2.0.0",
         "drupal/jquery_countdown": ">=1.0.0,<1.1.0",
-        "drupal/jquery_update": ">=2.0.0,<2.7.0",
+        "drupal/jquery_update": "<4.0.0",
         "drupal/js": "<2.0.0|>=2.0.0,<2.1.0",
         "drupal/jstool": "*",
         "drupal/juicebox": "<2.0.0",
