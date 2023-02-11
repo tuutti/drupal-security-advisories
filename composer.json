@@ -142,7 +142,7 @@
         "drupal/recaptcha_v3": ">=1.0.0,<1.2.0",
         "drupal/require_login": "<3.0.0",
         "drupal/salesforce": "<5.0.0",
-        "drupal/saml_sp": "<4.1.0",
+        "drupal/saml_sp": "<4.2.0",
         "drupal/samlauth": "<3.0.0|>=3.0.0,<3.1.0",
         "drupal/search_api": "<1.0.0|>=1.0.0,<1.27.0",
         "drupal/search_api_attachments": "<1.0.0|>=1.0.0,<1.0.0-beta18",
