@@ -150,7 +150,7 @@
         "drupal/edit_limit": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/education": "*",
         "drupal/elegant_theme": ">=1.0.0,<1.1.0",
-        "drupal/elf": "<3.0.0|>=3.0.0,<3.1.0",
+        "drupal/elf": "*",
         "drupal/elfinder": "<2.0.0",
         "drupal/elysia_cron": ">=2.0.0,<2.4.0",
         "drupal/email": "<1.0.0|>=1.0.0,<1.2.0",
