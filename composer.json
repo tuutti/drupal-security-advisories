@@ -250,6 +250,7 @@
         "drupal/instagram_block": "*",
         "drupal/invoice": "<1.3.0",
         "drupal/ishopping": "*",
+        "drupal/iubenda_integration": "<2.0.0|>=2.0.0,<2.5.0",
         "drupal/jammer": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/janrain_capture": "<2.0.0",
         "drupal/jquery_countdown": "<1.0.0|>=1.0.0,<1.1.0",
