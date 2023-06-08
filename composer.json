@@ -157,7 +157,7 @@
         "drupal/simple_amp": "<1.0.0|>=1.0.0,<1.16.0",
         "drupal/simple_oauth": "<5.2.0",
         "drupal/simple_revision": "*",
-        "drupal/smart_trim": "<2.0.0",
+        "drupal/smart_trim": "<2.1.0",
         "drupal/smtp": "<1.0.0|>=1.0.0,<1.0.0-beta3",
         "drupal/social": "<11.8.0",
         "drupal/socialbase": "<2.4.0|>=2.4.0,<2.4.3",
