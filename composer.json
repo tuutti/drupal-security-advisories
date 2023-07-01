@@ -12,7 +12,7 @@
         "drupal/aes": "*",
         "drupal/alinks": "<2.0.0",
         "drupal/anonymousredirect": "*",
-        "drupal/apigee_edge": "<2.0.0|>=2.0.0,<2.0.8",
+        "drupal/apigee_edge": "<2.1.0",
         "drupal/auto_login_url": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/bat": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/better_social_sharing_buttons": "<4.0.0|>=4.0.0,<4.0.3",
