@@ -221,7 +221,7 @@
         "drupal/go1_base": "<2.0.0|>=2.0.0,<2.0.0-beta16",
         "drupal/godwins_law": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/google_analytics": "<2.0.0|>=2.0.0,<2.3.0",
-        "drupal/google_analytics_counter": "<3.0.0|>=3.0.0,<3.2.0",
+        "drupal/google_analytics_counter": "*",
         "drupal/gss": "<1.0.0|>=1.0.0,<1.10.0",
         "drupal/h5p": "<1.0.0|>=1.0.0,<1.51.0",
         "drupal/hashcash": "<2.0.0|>=2.0.0,<2.2.0",
