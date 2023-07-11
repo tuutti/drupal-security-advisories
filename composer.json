@@ -509,7 +509,7 @@
         "drupal/spotlight": "<1.0.0|>=1.0.0,<1.5.0",
         "drupal/sqlsrv": "<2.0.0|>=2.0.0,<2.0.0",
         "drupal/ssh": "<=1.0.0-beta1",
-        "drupal/stage_file_proxy": "*",
+        "drupal/stage_file_proxy": "<1.0.0|>=1.0.0,<1.9.0",
         "drupal/step": "*",
         "drupal/stickynote": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/storage_api": "<1.0.0|>=1.0.0,<1.8.0",
