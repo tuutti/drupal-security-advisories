@@ -128,7 +128,7 @@
         "drupal/datereminder": "<1.0.0|>=1.0.0,<1.15.0",
         "drupal/ddblock": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/deploy": "<2.0.0|>=2.0.0,<2.0.0-beta2",
-        "drupal/devel": "<1.0.0|>=1.0.0,<1.1.0",
+        "drupal/devel": "*",
         "drupal/dfp": "<1.0.0|>=1.0.0,<1.5.0",
         "drupal/document": "<1.0.0|>=1.0.0,<1.21.0",
         "drupal/domain": "<3.0.0",
