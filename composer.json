@@ -308,6 +308,7 @@
         "drupal/metatags_quick": "<1.0.0|>=2.0.0,<2.10.0",
         "drupal/migrate": "<2.0.0|>=2.0.0,<2.8.0",
         "drupal/mimemail": "<1.0.0|>=1.0.0,<1.1.0",
+        "drupal/minifyhtml": "<1.0.0|>=1.0.0,<1.11.0",
         "drupal/miniorange_oauth_client": "<1.0.0|>=1.0.0,<1.21.0",
         "drupal/miniorange_saml": "<2.0.0|>=2.0.0,<2.60.0",
         "drupal/misery": "<2.0.0|>=2.0.0,<2.2.0",
