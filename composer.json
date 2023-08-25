@@ -4,7 +4,7 @@
     "type": "metapackage",
     "license": "GPL-2.0-or-later",
     "conflict": {
-        "drupal/acl": "<1.0.0",
+        "drupal/acl": "<1.0.0|>=1.0.0,<1.0.0",
         "drupal/acquia_connector": "<4.0.0",
         "drupal/acquia_contenthub": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/addtoany": "<1.0.0|>=1.0.0,<1.21.0|>=2.0.0,<2.0.4",
@@ -28,7 +28,7 @@
         "drupal/colorbox": "<1.0.0|>=1.0.0,<1.8.0",
         "drupal/commerce": "<2.0.0|>=2.0.0,<2.27.0",
         "drupal/commerce_elavon": "<2.0.0|>=2.0.0,<2.3.0",
-        "drupal/config_pages": "<2.0.0",
+        "drupal/config_pages": "<2.0.0|>=2.0.0,<2.9.0",
         "drupal/config_perms": "<2.0.0",
         "drupal/config_terms": "<1.0.0|>=1.0.0,<1.6.0",
         "drupal/config_update": "<1.0.0|>=1.0.0,<1.5.0",
