@@ -144,7 +144,7 @@
         "drupal/panels": "<4.0.0",
         "drupal/panopoly": "<2.0.0|>=2.0.0,<2.0.0-alpha7",
         "drupal/paragraphs": "<1.0.0|>=1.0.0,<1.6.0",
-        "drupal/pdf_api": "<2.3.0",
+        "drupal/pdf_api": "<2.4.0",
         "drupal/permissions_by_term": "<2.0.0|>=3.1.0,<3.1.19",
         "drupal/photos": "<4.0.0|>=4.0.0,<4.5.0|>=6.0.0,<6.0.4",
         "drupal/php": "<=1.1.0",
