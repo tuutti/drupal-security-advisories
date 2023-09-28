@@ -160,6 +160,7 @@
         "drupal/entity_backup": "*",
         "drupal/entity_translation": "<1.0.0|>=1.0.0,<1.0.0-beta5",
         "drupal/entitybulkdelete": "<1.0.0|>=1.0.0,<1.1.0",
+        "drupal/entitycache": "<1.0.0|>=1.0.0,<1.0.0-beta1",
         "drupal/entityform_block": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/entityqueue": "<1.0.0|>=1.0.0,<1.0.0-rc1",
         "drupal/entityqueue_taxonomy": "<1.0.0|>=1.0.0,<1.1.0",
