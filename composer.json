@@ -172,6 +172,7 @@
         "drupal/search_api_attachments": "<1.0.0|>=1.0.0,<1.0.0-beta18",
         "drupal/search_autocomplete": "<2.0.0|>=2.0.0,<2.0.3",
         "drupal/semver_example": "<2.1.0|>=2.1.0,<2.1.1|>=2.2.0,<2.2.1|>=2.3.0,<2.3.1",
+        "drupal/sendinblue": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/session_limit": "<2.0.0",
         "drupal/shorthand": "<4.0.3",
         "drupal/simple_amp": "<1.0.0|>=1.0.0,<1.16.0",
