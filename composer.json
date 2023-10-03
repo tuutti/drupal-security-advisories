@@ -482,6 +482,7 @@
         "drupal/security_questions": "<2.0.0",
         "drupal/select2widget": "<2.0.0|>=2.0.0,<2.9.0",
         "drupal/select_or_other": "<2.0.0|>=2.0.0,<2.24.0|>=3.0.0,<3.0.0-alpha3",
+        "drupal/sendinblue": "<1.0.0|>=1.0.0,<1.7.0",
         "drupal/services": "<3.0.0|>=3.0.0,<3.26.0",
         "drupal/services_basic_auth": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/services_sso_client": "<1.0.0|>=1.0.0,<1.6.0",
