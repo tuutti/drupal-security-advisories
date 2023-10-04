@@ -374,7 +374,7 @@
         "drupal/opening_hours": "<1.0.0|>=1.0.0,<1.6.0",
         "drupal/openlucius": "<1.0.0|>=1.0.0,<1.7.0",
         "drupal/openomega": "<1.0.0|>=1.0.0,<1.1.0",
-        "drupal/openoutreach": "<1.0.0|>=1.0.0,<1.47.0",
+        "drupal/openoutreach": "*",
         "drupal/openpublic": "<1.0.0|>=1.0.0,<1.11.0",
         "drupal/osf": "<3.0.0|>=3.0.0,<3.4.0",
         "drupal/outline_designer": "<2.0.0|>=2.0.0,<2.3.0",
