@@ -183,7 +183,7 @@
         "drupal/social": "<11.9.0",
         "drupal/socialbase": "<2.4.0|>=2.4.0,<2.4.3",
         "drupal/spamspan": "<3.1.0",
-        "drupal/stacks": "<2.0.0",
+        "drupal/stacks": "<3.0.0",
         "drupal/students": "<2.0.0",
         "drupal/subgroup": "<1.0.0|>=1.0.0,<1.0.1",
         "drupal/super_login": "<2.1.0",
