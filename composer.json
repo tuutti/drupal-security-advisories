@@ -111,7 +111,7 @@
         "drupal/loft_data_grids": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/login_alert": "<2.0.0",
         "drupal/lottiefiles_field": "<1.1.0",
-        "drupal/mail_login": "<2.0.0|>=2.0.0,<2.8.0",
+        "drupal/mail_login": "<2.0.0|>=2.0.0,<2.9.0",
         "drupal/mailchimp": "<1.0.0|>=2.2.0,<2.2.2",
         "drupal/mapbox_ui": "<1.2.0",
         "drupal/matomo": "<1.0.0|>=1.0.0,<1.22.0",
