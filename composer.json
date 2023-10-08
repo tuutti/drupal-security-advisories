@@ -126,7 +126,7 @@
         "drupal/miniorange_saml": "<2.0.0|>=2.0.0,<2.24.0",
         "drupal/modal_form": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/modal_page": "<4.1.0",
-        "drupal/multiple_registration": "<3.2.0",
+        "drupal/multiple_registration": "<3.3.0",
         "drupal/next": "<1.6.0",
         "drupal/nexus": "*",
         "drupal/node_view_permissions": "<1.0.0|>=1.0.0,<1.1.0",
