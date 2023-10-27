@@ -38,7 +38,7 @@
         "drupal/create_user_permission": "<2.0.0",
         "drupal/cshs": "<3.0.0|>=3.0.0,<3.5.0",
         "drupal/ctools": "<3.0.0|>=3.0.0,<3.7.0",
-        "drupal/custom_breadcrumbs": "<1.0.0|>=1.0.0,<1.0.1",
+        "drupal/custom_breadcrumbs": "<1.1.0",
         "drupal/datafield": "<1.0.0|>=1.0.0,<1.0.16",
         "drupal/decoupled_router": "<2.0.0",
         "drupal/dfp": "<1.0.0|>=1.0.0,<1.2.0",
