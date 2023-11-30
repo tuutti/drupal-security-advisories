@@ -217,6 +217,7 @@
         "drupal/wingsuit_companion": "<1.0.0|>=1.0.0,<1.1.0|>=2.0.0,<2.0.0-beta8",
         "drupal/workbench_moderation": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/xmlsitemap": "<1.0.0|>=1.0.0,<1.0.0-alpha2",
-        "drupal/xray_audit": "<1.5.0"
+        "drupal/xray_audit": "<1.5.0",
+        "drupal/xsendfile": "<1.0.0|>=1.0.0,<1.2.0"
     }
 }
