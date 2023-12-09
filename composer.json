@@ -475,7 +475,7 @@
         "drupal/search_api_page": "<1.0.0|>=1.0.0,<1.6.0",
         "drupal/search_api_solr": "<1.0.0|>=1.0.0,<1.14.0",
         "drupal/search_api_sorts": "<1.0.0|>=1.0.0,<1.7.0",
-        "drupal/search_autocomplete": "<4.0.0|>=4.0.0,<4.8.0",
+        "drupal/search_autocomplete": "*",
         "drupal/secure_cookie_data": "<2.0.0|>=2.0.0,<2.1.0",
         "drupal/securelogin": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/securepages": "<1.0.0|>=1.0.0,<1.0.0-beta2",
