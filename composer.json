@@ -77,7 +77,7 @@
         "drupal/cloudwords": "<2.0.0|>=2.0.0,<2.3.0",
         "drupal/cms_updater": "*",
         "drupal/co_ment": "<1.0.0|>=1.0.0,<1.9.0",
-        "drupal/cod": "<2.0.0",
+        "drupal/cod": "*",
         "drupal/coder": "*",
         "drupal/colorbox": "<2.0.0|>=2.0.0,<2.16.0",
         "drupal/colorbox_node": "<3.0.0|>=3.0.0,<3.6.0",
