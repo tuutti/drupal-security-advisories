@@ -162,7 +162,7 @@
         "drupal/protected_pages": "<1.0.0|>=1.0.0,<1.6.0",
         "drupal/quick_node_clone": "<1.0.0|>=1.0.0,<1.15.0",
         "drupal/quickedit": "<1.0.0|>=1.0.0,<1.0.1",
-        "drupal/rate": "<3.0.0",
+        "drupal/rate": "<3.1.0",
         "drupal/readonlymode": "<1.0.0",
         "drupal/recaptcha_v3": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/require_login": "<3.0.0",
