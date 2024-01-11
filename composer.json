@@ -191,6 +191,7 @@
         "drupal/fieldable_panels_panes": "<1.0.0|>=1.0.0,<1.10.0",
         "drupal/fieldblock": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/file_chooser_field": "<1.0.0|>=1.0.0,<1.13.0",
+        "drupal/file_entity": "<2.0.0|>=2.0.0,<2.38.0|>=3.0.0,<3.0.0-beta24",
         "drupal/file_resup": "<1.0.0|>=1.0.0,<1.5.0",
         "drupal/filefield_paths": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/filefield_sources": "<1.0.0|>=1.0.0,<1.11.0",
