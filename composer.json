@@ -525,7 +525,7 @@
         "drupal/super_login": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/support": "<1.0.0|>=1.0.0,<1.0.0-beta3",
         "drupal/survey_builder": "<1.0.0|>=1.0.0,<1.2.0",
-        "drupal/swiftmailer": "<1.0.0|>=1.0.0,<1.7.0",
+        "drupal/swiftmailer": "*",
         "drupal/tablefield": "<3.0.0|>=3.0.0,<3.5.0",
         "drupal/tac_lite": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/tadaa": "<1.0.0|>=1.0.0,<1.4.0",
