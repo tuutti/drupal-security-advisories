@@ -22,6 +22,7 @@
         "drupal/bugsnag": "*",
         "drupal/business_responsive_theme": "<2.0.0|>=2.0.0,<2.0.3",
         "drupal/civicccookiecontrol": "<4.5.0",
+        "drupal/ckeditor_lts": "<1.0.1",
         "drupal/ckeditor_uploadimage": "*",
         "drupal/cleantalk": "<9.3.0",
         "drupal/cog": "*",
