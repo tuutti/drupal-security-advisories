@@ -71,6 +71,7 @@
         "drupal/chatroom": "<2.0.0|>=2.0.0,<2.2.0",
         "drupal/civicrm_private_report": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/ckeditor": "*",
+        "drupal/ckeditor_lts": "<1.25.0",
         "drupal/clean_theme": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/clientside_validation": "<1.0.0|>=1.0.0,<1.45.0|>=2.0.0,<2.0.0-beta2",
         "drupal/cloud": "*",
