@@ -190,7 +190,7 @@
         "drupal/simple_revision": "*",
         "drupal/smart_trim": "<2.1.0",
         "drupal/smtp": "<1.0.0|>=1.0.0,<1.0.0-beta3",
-        "drupal/social": "<12.1.0",
+        "drupal/social": "<12.2.0",
         "drupal/socialbase": "<2.5.0",
         "drupal/spamspan": "<3.1.0",
         "drupal/stacks": "<3.0.0",
