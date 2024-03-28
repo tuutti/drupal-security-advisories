@@ -204,7 +204,7 @@
         "drupal/symfony_mailer_lite": "<1.0.0|>=1.0.0,<1.0.6",
         "drupal/tablefield": "<2.0.0|>=2.0.0,<2.1.0",
         "drupal/tac_lite": "<1.0.0|>=1.0.0,<1.6.0",
-        "drupal/tacjs": "<6.0.0|>=6.0.0,<6.4.0-alpha1",
+        "drupal/tacjs": "<6.0.0|>=6.0.0,<6.5.0",
         "drupal/tagify": "<1.2.0",
         "drupal/taxonomy_access_fix": "<4.0.0",
         "drupal/taxonomy_manager": "<2.0.0|>=2.0.0,<2.0.6",
