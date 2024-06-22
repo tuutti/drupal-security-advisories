@@ -12,7 +12,7 @@
         "drupal/admin_views": "<1.0.0|>=1.0.0,<1.7.0",
         "drupal/advanced_forum": "<2.0.0|>=2.0.0,<2.8.0",
         "drupal/aes": "*",
-        "drupal/agov": "<2.0.0",
+        "drupal/agov": "*",
         "drupal/ajax_facets": "<3.0.0|>=3.0.0,<3.7.0",
         "drupal/ajax_timeline": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/amocrm": "<1.0.0|>=1.0.0,<1.2.0",
