@@ -193,7 +193,7 @@
         "drupal/sendinblue": "*",
         "drupal/session_limit": "<2.0.0",
         "drupal/shorthand": "<4.0.3",
-        "drupal/simple_amp": "*",
+        "drupal/simple_amp": "<3.0.0",
         "drupal/simple_oauth": "<5.2.0",
         "drupal/simple_revision": "*",
         "drupal/smart_trim": "<2.1.0",
