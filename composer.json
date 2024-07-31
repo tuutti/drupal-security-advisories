@@ -77,7 +77,7 @@
         "drupal/expand_collapse_formatter": "<2.0.0",
         "drupal/expandable_formatter": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/expire_reset_pass_link": "*",
-        "drupal/fac": "<2.1.0",
+        "drupal/fac": "<2.2.0",
         "drupal/facets": "<2.0.0",
         "drupal/fancy_file_delete": "<2.0.0|>=2.0.0,<2.0.7",
         "drupal/file_extractor": "<4.1.0",
