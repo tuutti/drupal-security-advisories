@@ -167,7 +167,7 @@
         "drupal/php": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/phpconfig": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/piwik": "*",
-        "drupal/preview_link": "<2.1.0",
+        "drupal/preview_link": "<2.2.0",
         "drupal/private_content": "<2.0.0|>=2.0.0,<2.1.0",
         "drupal/private_taxonomy": "*",
         "drupal/prlp": "<1.0.0|>=1.0.0,<1.5.0",
