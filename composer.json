@@ -379,6 +379,8 @@
         "drupal/openomega": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/openoutreach": "*",
         "drupal/openpublic": "<1.0.0|>=1.0.0,<1.11.0",
+        "drupal/opigno": "<1.0.0|>=1.0.0,<1.23.0",
+        "drupal/opigno_tincan_question_type": "<1.0.0|>=1.0.0,<1.3.0",
         "drupal/osf": "<3.0.0|>=3.0.0,<3.4.0",
         "drupal/outline_designer": "<2.0.0|>=2.0.0,<2.3.0",
         "drupal/page_manager_search": "<1.0.0|>=1.0.0,<1.2.0",
