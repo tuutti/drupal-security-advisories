@@ -328,7 +328,7 @@
         "drupal/mosaik": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/multiblock": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/multilink": "<2.7.0",
-        "drupal/mutual_credit": "<3.0.0|>=3.0.0,<3.7.0",
+        "drupal/mutual_credit": "*",
         "drupal/mvf": "<1.0.0|>=1.0.0,<1.0.0-beta2",
         "drupal/navbar": "<1.0.0|>=1.0.0,<1.8.0",
         "drupal/netforum_authentication": "<1.0.0|>=1.0.0,<1.1.0",
