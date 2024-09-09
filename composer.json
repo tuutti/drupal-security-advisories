@@ -24,7 +24,7 @@
         "drupal/at_base": "*",
         "drupal/authcache": "<2.0.0|>=2.0.0,<2.0.0-beta6",
         "drupal/auto_login_url": "<1.0.0|>=1.0.0,<1.7.0",
-        "drupal/autocomplete_deluxe": "<2.0.0|>=2.0.0,<2.2.0",
+        "drupal/autocomplete_deluxe": "*",
         "drupal/autocomplete_widgets": "<1.0.0|>=1.0.0,<1.0.0-rc1",
         "drupal/autologout": "<4.0.0|>=4.0.0,<4.5.0",
         "drupal/autosave": "<2.0.0",
