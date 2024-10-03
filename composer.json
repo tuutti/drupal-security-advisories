@@ -545,7 +545,7 @@
         "drupal/term_merge": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/term_queue": "<1.0.0|>=1.0.0,<1.0.0-rc1",
         "drupal/term_reference_tree": "<1.0.0|>=1.0.0,<1.11.0",
-        "drupal/tfa": "<2.0.0|>=2.0.0,<2.0.0-beta3",
+        "drupal/tfa": "<2.0.0|>=2.0.0,<2.4.0",
         "drupal/tfa_basic": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/tft": "*",
         "drupal/time_spent": "<2.0.0|>=2.0.0,<2.3.0",
