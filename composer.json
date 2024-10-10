@@ -324,7 +324,7 @@
         "drupal/moip": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/mollom": "*",
         "drupal/moneysuite": "<10.0.0|>=10.0.0,<10.4.0",
-        "drupal/monster_menus": "<1.0.0|>=1.0.0,<1.24.0",
+        "drupal/monster_menus": "<1.0.0|>=1.0.0,<1.34.0",
         "drupal/mosaik": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/multiblock": "<1.0.0|>=1.0.0,<1.1.0",
         "drupal/multilink": "<2.7.0",
