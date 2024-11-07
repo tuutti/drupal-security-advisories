@@ -35,6 +35,7 @@
         "drupal/badbehavior": "<2.0.0|>=2.0.0,<2.2216.0",
         "drupal/baidu_analytics": "*",
         "drupal/bakery": "<1.0.0|>=2.0.0,<2.0.0-alpha4",
+        "drupal/basic_auth": "<1.0.0|>=1.0.0,<1.4.0",
         "drupal/batch_jobs": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/bealestreet": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/bean": "<1.0.0|>=1.0.0,<1.5.0",
