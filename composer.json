@@ -88,7 +88,7 @@
         "drupal/file_extractor": "<4.1.0",
         "drupal/filefield_paths": "<1.0.0|>=1.0.0,<1.0.0-beta6",
         "drupal/fontawesome": "<2.0.0|>=2.0.0,<2.12.0",
-        "drupal/form_mode_manager": "<3.0.0",
+        "drupal/form_mode_manager": "<3.1.0",
         "drupal/forms_steps": "<1.0.0|>=1.0.0,<1.2.0",
         "drupal/forum_access": "<1.0.0",
         "drupal/fraction": "<2.3.0",
