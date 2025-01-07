@@ -6,7 +6,7 @@
     "conflict": {
         "drupal/acl": "<2.0.0",
         "drupal/acquia_connector": "<4.1.0",
-        "drupal/acquia_contenthub": "<2.0.0",
+        "drupal/acquia_contenthub": "<3.6.0",
         "drupal/acquia_dam": "<1.0.0|>=1.0.0,<1.0.13|>=1.1.0,<1.1.0-beta3",
         "drupal/addtoany": "<2.0.0|>=2.0.0,<2.0.4",
         "drupal/admin_toolbar": "<3.4.0",
