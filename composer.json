@@ -14,6 +14,7 @@
         "drupal/adv_varnish": "<4.0.0|>=4.0.0,<4.0.11",
         "drupal/advanced_pwa": "<1.0.0|>=1.0.0,<1.5.0",
         "drupal/aes": "*",
+        "drupal/ai": "<1.0.0|>=1.0.0,<1.0.2",
         "drupal/alinks": "<2.0.0",
         "drupal/all_extensions": "*",
         "drupal/anonymousredirect": "*",
