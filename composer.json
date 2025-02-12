@@ -264,7 +264,7 @@
         "drupal/vendor_stream_wrapper": "<2.0.0|>=2.0.0,<2.0.1",
         "drupal/video": "<3.0.0",
         "drupal/view_password": "<6.0.0|>=6.0.0,<6.0.4",
-        "drupal/views_bulk_operations": "<4.2.0",
+        "drupal/views_bulk_operations": "<4.3.0",
         "drupal/views_svg_animation": "<1.0.0|>=1.0.0,<1.0.1",
         "drupal/viewsreference": "<2.0.0|>=2.0.0,<2.0.0-beta2",
         "drupal/vppr": "*",
