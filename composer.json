@@ -232,7 +232,7 @@
         "drupal/simple_revision": "*",
         "drupal/smart_trim": "<2.1.0",
         "drupal/smtp": "<1.0.0|>=1.0.0,<1.0.0-beta3",
-        "drupal/social": "<12.3.0|>=12.4.0,<12.4.10|>=13.0.0,<13.0.0-alpha11",
+        "drupal/social": "<12.3.0|>=12.3.0,<12.3.12|>=12.4.0,<12.4.10|>=13.0.0,<13.0.0-alpha11",
         "drupal/socialbase": "<2.5.0",
         "drupal/spamspan": "<3.2.0|>=3.2.0,<3.2.1",
         "drupal/stacks": "<3.0.0",
