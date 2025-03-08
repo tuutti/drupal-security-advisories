@@ -61,7 +61,7 @@
         "drupal/diff": "<1.0.0|>=1.0.0,<1.8.0|>=2.0.0,<2.0.0-beta3",
         "drupal/domain_group": "*",
         "drupal/download_all_files": "<2.0.0|>=2.0.0,<2.0.2",
-        "drupal/drd": "<4.0.0",
+        "drupal/drd": "<4.1.0",
         "drupal/drd_agent": "<4.0.0",
         "drupal/druadmin_lte_theme": "*",
         "drupal/drupal": "<10.3.0|>=10.3.0,<10.3.13|>=10.4.0,<10.4.3|>=11.0.0,<11.0.12|>=11.1.0,<11.1.3",
